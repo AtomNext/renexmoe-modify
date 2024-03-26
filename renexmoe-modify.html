@@ -27,8 +27,8 @@
   <meta name="keywords" content="<!--Keywords-->" />
   <meta name="description" content="<!--Description-->" />
 
-  <link rel="stylesheet" href="//unpkg.com/renexmoe-tw527e-edition@1.2.4/css/app1@uw34ru4ehdn4pywddmebm79dnnb2jyei.css" />
-  <link rel="stylesheet" href="//unpkg.com/renexmoe-tw527e-edition@1.2.4/css/app2@eqge353pwpgivauvcvzejwrki4mdissj.css" />
+  <link rel="stylesheet" href="//unpkg.com/@atomnext/renexmoe-modify/css/app1@uw34ru4ehdn4pywddmebm79dnnb2jyei.css" />
+  <link rel="stylesheet" href="//unpkg.com/@atomnext/renexmoe-modify/css/app2@eqge353pwpgivauvcvzejwrki4mdissj.css" />
 
   <link rel="stylesheet" href="//unpkg.com/@fontsource/noto-sans-sc/500.css" />
   <link rel="stylesheet" href="//unpkg.com/@fontsource/noto-sans-tc/500.css" />
@@ -65,6 +65,7 @@
 
     .mdui-shadow-3 {
       background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px)
     }
 
     .mdui-theme-layout-dark {
@@ -382,6 +383,16 @@
     <!--IsFolderStart-->
     <!--HeadomfStart-->
     <div class="mdui-typo mdui-shadow-3" style="padding: 20px; margin: 20px 0">
+      <p id="hitokoto">:D 获取中...</p>
+      <script>
+          fetch('https://v1.hitokoto.cn')
+              .then(response => response.json())
+              .then(data => {
+                  const hitokoto = document.getElementById('hitokoto')
+                  hitokoto.innerText = data.hitokoto
+              })
+              .catch(console.error)
+      </script>
       <!--HeadomfContent-->
     </div>
     <!--HeadomfEnd-->
@@ -805,15 +816,15 @@
 <script src="//unpkg.com/jquery"></script>
 <script src="//unpkg.com/@highlightjs/cdn-assets/highlight.min.js"></script>
 
-<script src="//unpkg.com/renexmoe-tw527e-edition@1.2.4/js/extra.js"></script>
+<script src="//unpkg.com/@atomnext/renexmoe-modify/js/extra.js"></script>
 
-<script src="//unpkg.com/renexmoe-tw527e-edition@1.2.4/js/app@qm97ssij9cnii7x8fnbkpq4hcgq35dyr.js"></script>
-<script src="//unpkg.com/renexmoe-tw527e-edition@1.2.4/js/app@59467336fgwnpx8qbfvtmpyeefv35e5i.js"></script>
-<script src="//unpkg.com/renexmoe-tw527e-edition@1.2.4/js/app@a7r8jgn2qe3eyfrkahwdnqcjf7uba95k.js"></script>
-<script src="//unpkg.com/renexmoe-tw527e-edition@1.2.4/js/app@keaxctnyw29nuzpsh66g7ki4h5wzy8zn.js"></script>
-<script src="//unpkg.com/renexmoe-tw527e-edition@1.2.4/js/app@pe2nahunr9aihucdgc2ssjbgnaccr5rz.js"></script>
-<script src="//unpkg.com/renexmoe-tw527e-edition@1.2.4/js/app@tsjmiafbhksy5pyb5tchy765wshmwwnd.js"></script>
-<script src="//unpkg.com/renexmoe-tw527e-edition@1.2.4/js/webpack-runtime@cx4vgpbaggjuhg8rh6m3yarhkkxy4dm3.js"></script>
+<script src="//unpkg.com/@atomnext/renexmoe-modify/js/app@qm97ssij9cnii7x8fnbkpq4hcgq35dyr.js"></script>
+<script src="//unpkg.com/@atomnext/renexmoe-modify/js/app@59467336fgwnpx8qbfvtmpyeefv35e5i.js"></script>
+<script src="//unpkg.com/@atomnext/renexmoe-modify/js/app@a7r8jgn2qe3eyfrkahwdnqcjf7uba95k.js"></script>
+<script src="//unpkg.com/@atomnext/renexmoe-modify/js/app@keaxctnyw29nuzpsh66g7ki4h5wzy8zn.js"></script>
+<script src="//unpkg.com/@atomnext/renexmoe-modify/js/app@pe2nahunr9aihucdgc2ssjbgnaccr5rz.js"></script>
+<script src="//unpkg.com/@atomnext/renexmoe-modify/js/app@tsjmiafbhksy5pyb5tchy765wshmwwnd.js"></script>
+<script src="//unpkg.com/@atomnext/renexmoe-modify/js/webpack-runtime@cx4vgpbaggjuhg8rh6m3yarhkkxy4dm3.js"></script>
 
 <script>
   window.renexmoe.toggle_theme();

@@ -1,6 +1,6 @@
 {
   "name": "@atomnext/renexmoe-modify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "自用OneManager主题",
   "main": "renexmoe-modify.html",
   "scripts": {
@@ -16,7 +16,7 @@
     "unpkg",
     "onemanager",
     "renexmoe",
-    "onemanager-php",
+    "onemanager-php"
   ],
   "author": "atomnext",
   "license": "GPL-3.0",
