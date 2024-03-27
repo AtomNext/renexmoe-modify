@@ -1,6 +1,6 @@
 {
   "name": "@atomnext/renexmoe-modify",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "自用OneManager主题",
   "main": "renexmoe-modify.html",
   "scripts": {
